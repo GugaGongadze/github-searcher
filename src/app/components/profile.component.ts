@@ -20,12 +20,10 @@ export class ProfileComponent implements OnInit {
     this._githubService.updateUser(this.username);
 
     this._githubService.getUser().subscribe(user => {
-      // console.log(user);
       this.user = user;
     });
 
     this._githubService.getRepos().subscribe(repos => {
-      // console.log(repos);
       this.repos = repos;
     });
   }
